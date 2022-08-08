@@ -1,15 +1,11 @@
 <template>
-  <n-button type="primary" @click="increment">
-    <template #icon>
-      <n-icon><CalculatorOutlined /></n-icon>
-    </template>
+  <button @click="increment">
     {{ count }}
-  </n-button>
+  </button>
 </template>
 
 <script setup lang="ts">
 import { useMainStore } from '@/stores/main'
-import { CalculatorOutlined } from '@vicons/antd'
 const { count, updateCount } = useMainStore()
 
 const increment = () => {
